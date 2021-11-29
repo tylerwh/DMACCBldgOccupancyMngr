@@ -23,6 +23,8 @@ public class Occupant {
 
     }
 
+    public long getId() { return id; }
+
     public String getFname() {
         return fname;
     }

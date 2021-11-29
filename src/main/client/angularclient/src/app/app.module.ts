@@ -10,21 +10,26 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import { HomeTabGroupComponent } from './components/home-tab-group/home-tab-group.component';
 import { MatTabsModule } from "@angular/material/tabs";
 import { MatListModule } from "@angular/material/list";
+import {OccupantsListComponent} from "./components/occupants-list/occupants-list.component";
+import {OccupantServiceService} from "./services/occupant-service.service";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
-    HomeTabGroupComponent
+    HomeTabGroupComponent,
+    OccupantsListComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatToolbarModule,
     MatListModule,
     MatTabsModule
   ],
-  providers: [],
+  providers: [OccupantServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
