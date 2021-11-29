@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {OccupantServiceService} from "../../services/occupant-service.service";
+import {Occupant} from "../../models/occupant";
 
 @Component({
   selector: 'app-home-tab-group',
