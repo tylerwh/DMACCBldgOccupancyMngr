@@ -8,18 +8,18 @@ import {GetOccupantsResponse, Occupant} from "../models/occupant";
 })
 export class OccupantServiceService {
   private occupantsUrl: string;
-  private occs: Occupant[] = [
-    {
-      id: 1,
-      fname: "Jake",
-      lname: "Newman"
-    },
-    {
-      id: 2,
-      fname: "Blake",
-      lname: "Oldman"
-    }
-  ];
+  // private occs: Occupant[] = [
+  //   {
+  //     id: 1,
+  //     fname: "Jake",
+  //     lname: "Newman"
+  //   },
+  //   {
+  //     id: 2,
+  //     fname: "Blake",
+  //     lname: "Oldman"
+  //   }
+  // ];
 
   constructor(private http: HttpClient) {
     this.occupantsUrl = 'http://localhost:8080';
