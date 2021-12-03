@@ -1,11 +1,13 @@
 <div class="card my-5">
   <div class="card-body">
+    <button mat-button (click)="openDialog()" style="margin-bottom: 5px">Add Occupant</button>
     <table class="table table-bordered table-striped">
       <thead class="thead-dark">
         <tr>
           <th scope="col">Id</th>
           <th scope="col">First Name</th>
           <th scope="col">Last Name</th>
+          <th scope="col">Bldg Number</th>
         </tr>
       </thead>
       <tbody>
@@ -13,9 +15,10 @@
           <td scope="col">{{ occ.id }}</td>
           <td scope="col">{{ occ.fname }}</td>
           <td scope="col">{{ occ.lname }}</td>
+          <td scope="col">{{occ.bldgNum }}</td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
-<!--<h1>Do something else here!</h1>-->
+

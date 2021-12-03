@@ -19,11 +19,12 @@ public class DmaccBldgOccupancyMngrApplication {
     @Bean
     CommandLineRunner init(OccupantRepository occupantRepository){
         return args -> {
-          Stream.of("John|Smith","Sally|Sue","Carl|Brunner").forEach(name -> {
+          Stream.of("John|Smith|2","Sally|Sue|2","Carl|Brunner|3").forEach(name -> {
               List<String> fullname = Arrays.asList(name.split("\\|"));
               String fname = fullname.get(0);
               String lname = fullname.get(1);
-              Occupant occupant = new Occupant(fname, lname);
+              int bldgNum = Integer.parseInt(fullname.get(2));
+              Occupant occupant = new Occupant(fname, lname, bldgNum);
               occupantRepository.save(occupant);
           });
           occupantRepository.findAll().forEach(System.out::println);

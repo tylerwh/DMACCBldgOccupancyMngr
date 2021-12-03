@@ -14,9 +14,16 @@ public class Occupant {
     private String fname;
     private String lname;
 
-    public Occupant(String fname, String lname) {
+    public int getBldgNum() {
+        return bldgNum;
+    }
+
+    private int bldgNum;
+
+    public Occupant(String fname, String lname, int bldgNum) {
         this.fname = fname;
         this.lname = lname;
+        this.bldgNum = bldgNum;
     }
 
     public Occupant() {
