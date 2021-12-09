@@ -16,6 +16,8 @@ import {OccupantServiceService} from "./services/occupant-service.service";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { OccupantFormComponent } from './components/occupant-form/occupant-form.component';
 import { AddOccupantDialogComponent } from './components/add-occupant-dialog/add-occupant-dialog.component';
+import { BuildingListComponent } from './components/building-list/building-list.component';
+import {MatDividerModule} from "@angular/material/divider";
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { AddOccupantDialogComponent } from './components/add-occupant-dialog/add
     HomeTabGroupComponent,
     OccupantsListComponent,
     OccupantFormComponent,
-    AddOccupantDialogComponent
+    AddOccupantDialogComponent,
+    BuildingListComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,8 @@ import { AddOccupantDialogComponent } from './components/add-occupant-dialog/add
     MatToolbarModule,
     MatListModule,
     MatTabsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatDividerModule
   ],
   providers: [OccupantServiceService],
   bootstrap: [AppComponent]
