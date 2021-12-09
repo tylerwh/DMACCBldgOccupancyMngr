@@ -46,6 +46,7 @@ public class Occupant {
                 "id=" + id +
                 ", fname='" + fname + '\'' +
                 ", lname='" + lname + '\'' +
+                ", bldgNum=" + bldgNum +
                 '}';
     }
 }
